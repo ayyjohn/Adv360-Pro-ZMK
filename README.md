@@ -54,6 +54,7 @@ Follow the programming instruction on page 8 of the [Quick Start Guide](https://
 1. Connect the left side keyboard to USB.
 1. Press Mod+macro1 to put the left side into bootloader mode; it should attach to your computer as a USB drive.
 1. Copy `left.uf2` to the USB drive and it will disconnect.
+** USE CP https://osxdaily.com/2022/11/03/workaround-for-operation-cant-be-completed-unexpected-error-100093-macos-ventura-finder-error/ **
 1. Power off both keyboards (by unplugging them and making sure the switches are off).
 1. Turn on the left side keyboard with the switch.
 1. Connect the right side keyboard to USB to power it on.
