@@ -22,7 +22,7 @@
 // left handed home-row modifiers
 ZMK_BEHAVIOR(hrml, hold_tap,
     flavor="balanced"; // hold if another key is pressed and released within the tapping term
-    tapping-term-ms=<280>; // allows single-handed use for keys on same side if mod key is held for 280ms first
+    tapping-term-ms = <280>; // allows single-handed use for keys on same side if mod key is held for 280ms first
     quick-tap-ms = <175>;
     require-prior-idle-ms = <150>; // resolve as tap when it's pressed within this much time after another key
     bindings = <&kp>, <&kp>;
@@ -33,7 +33,7 @@ ZMK_BEHAVIOR(hrml, hold_tap,
 // right handed home-row modifiers
 ZMK_BEHAVIOR(hrmr, hold_tap,
     flavor="balanced";
-    tapping-term-ms=<280>;
+    tapping-term-ms = <280>;
     quick-tap-ms = <175>;
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
@@ -44,37 +44,37 @@ ZMK_BEHAVIOR(hrmr, hold_tap,
 // window placement
 ZMK_BEHAVIOR(win_right, macro,
     wait-ms = <100>;
-    tap-ms=<5>;
+    tap-ms= <5>;
     bindings = <&kp LG(LA(LC(RIGHT)))>;
 )
 ZMK_BEHAVIOR(win_left, macro,
     wait-ms = <100>;
-    tap-ms=<5>;
+    tap-ms= <5>;
     bindings = <&kp LG(LA(LC(LEFT)))>;
 )
 ZMK_BEHAVIOR(screen_right, macro,
     wait-ms = <100>;
-    tap-ms=<5>;
+    tap-ms= <5>;
     bindings = <&kp LG(LA(RIGHT))>;
 )
 
 ZMK_BEHAVIOR(screen_left, macro,
     wait-ms = <100>;
-    tap-ms=<5>;
+    tap-ms= <5>;
     bindings = <&kp LG(LA(LEFT))>;
 )
 
 // hotswap program
 ZMK_BEHAVIOR(switch, macro,
     wait-ms = <100>;
-    tap-ms=<5>;
+    tap-ms= <5>;
     bindings = <&kp LG(TAB)>;
 )
 
 // spotlight search
 ZMK_BEHAVIOR(spotlight, macro,
     wait-ms = <100>;
-    tap-ms=<5>;
+    tap-ms= <5>;
     bindings = <&kp LG(SPACE)>;
 )
 
@@ -82,7 +82,7 @@ ZMK_BEHAVIOR(spotlight, macro,
 // cycle windows, same program
 ZMK_BEHAVIOR(win_switch, macro,
     wait-ms = <100>;
-    tap-ms=<5>;
+    tap-ms= <5>;
     bindings = <&kp LG(TILDE)>;
 )
 
