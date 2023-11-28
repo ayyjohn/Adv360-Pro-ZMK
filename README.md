@@ -1,3 +1,9 @@
+1. modify adv360.keymap
+2. make
+3. flashl
+4. flashr
+
+
 # Kinesis Advantage 360 Pro ZMK Config
 
 ## Modifying the keymap
