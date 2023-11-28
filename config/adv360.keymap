@@ -15,6 +15,28 @@
 #define MOD 3
 #define SYM 4
 
+#define KEYS_L 14 15 16 17 18 19 28 29 30 31 32 33 46 47 48 49 50
+#define KEYS_R 22 23 24 25 26 27 40 41 42 43 44 45 54 55 56 57 58
+#define THUMBS 35 36 37 38 52 53 65 66 67 68 69 70
+
+// left handed home-row modifiers
+ZMK_BEHAVIOR(hrml, hold_tap,
+    flavor="balanced";
+    tapping-term-ms=<280>;
+    quick-tap-ms = <125>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_R THUMBS>;
+)
+
+// right handed home-row modifiers
+ZMK_BEHAVIOR(hrmr, hold_tap,
+    flavor="balanced";
+    tapping-term-ms=<280>;
+    quick-tap-ms = <125>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_L THUMBS>;
+)
+
 
 // spotlight search
 ZMK_BEHAVIOR(spotlight, macro,
@@ -37,14 +59,6 @@ ZMK_BEHAVIOR(win_switch, macro,
     bindings = <&kp LG(TILDE)>;
 )
 
-// homerow mods, &hr
-ZMK_BEHAVIOR(hr, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <125>;
-    bindings = <&kp>, <&kp>;
-)
-
 // tap: sticky shift | double tap: capsword
 ZMK_BEHAVIOR(sshift, tap_dance,
     tapping-term-ms = <200>;
@@ -64,7 +78,7 @@ ZMK_LAYER(default_layer,
      /* ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                          ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
            &kp TAB        &kp SQT      &kp COMMA      &kp DOT        &kp P         &kp Y         &none                                                                   &none         &kp F         &kp G         &kp C         &kp R          &kp L       &kp BSLH
      /* ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╭────────────┬─────────────┬─────────────┬─────────────╮ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
-           &kp ESC      &hr LALT A    &hr LCTRL O   &hr LGUI E    &hr LSHIFT U     &kp I         &none          ______       ______        ______        &sshift         &none         &kp D       &hr RSHIFT H   &hr RGUI T   &hr RCTRL N   &hr RALT S     &kp MINUS
+           &kp ESC     &hrml LALT A  &hrml LCTRL O &hrml LGUI E  &hrml LSHIFT U    &kp I         &none          ______       ______        ______        &sshift         &none         &kp D      &hrmr RSHIFT H &hrmr RGUI T &hrmr RCTRL N  &hrmr RALT S   &kp MINUS
      /* ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯ ╰────────────┼─────────────┼─────────────┼─────────────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
            &kp LSHFT     &kp SEMI        &kp Q         &kp J         &kp K         &kp X                                     ______        ______                                      &kp B         &kp M         &kp W         &kp V          &kp Z       &kp RSHIFT
      /* ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯ ╭──────────────────────────┼─────────────┼─────────────┼───────────────────────────╮ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
