@@ -7,6 +7,7 @@
 
 // make it simpler to make keys transparent
 #define ______ &trans
+#define xxxxxx &none
 
 // layer shortcuts
 #define DEF 0
@@ -16,6 +17,7 @@
 #define SYM 4
 #define CMD 5
 
+// todo: translate these and make sure they're correct,
 #define KEYS_L 14 15 16 17 18 19 28 29 30 31 32 33 46 47 48 49 50
 #define KEYS_R 22 23 24 25 26 27 40 41 42 43 44 45 54 55 56 57 58
 #define THUMBS 35 36 37 38 52 53 65 66 67 68 69 70
@@ -126,9 +128,9 @@ ZMK_LAYER(default_layer,
      /* ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                          ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ */
            &kp PLUS       &kp N1        &kp N2        &kp N3         &kp N4        &kp N5        &mo MOD                                                                 &mo MOD       &kp N6        &kp N7        &kp N8        &kp N9         &kp N0      &kp MINUS
      /* ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                          ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
-            ______        &kp SQT      &kp COMMA      &kp DOT        &kp P         &kp Y         &none                                                                   &none         &kp F         &kp G         &kp C         &kp R          &kp L       &kp FSLH
+            ______        &kp SQT      &kp COMMA      &kp DOT        &kp P         &kp Y        xxxxxx                                                                   xxxxxx        &kp F         &kp G         &kp C         &kp R          &kp L       &kp FSLH
      /* ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╭────────────┬─────────────┬─────────────┬─────────────╮ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
-           &kp ESC     &hrml LALT A  &hrml LCTRL O &hrml LGUI E  &hrml LSHIFT U    &kp I         &none          &sshift      &sl FUN       &sl SYM       &sshift         &none         &kp D      &hrmr RSHIFT H &hrmr RGUI T &hrmr RCTRL N  &hrmr RALT S   &kp MINUS
+           &kp ESC     &hrml LALT A  &hrml LCTRL O &hrml LGUI E  &hrml LSHIFT U    &kp I        xxxxxx          &sshift      &sl FUN       &sl SYM       &sshift         xxxxxx        &kp D      &hrmr RSHIFT H &hrmr RGUI T &hrmr RCTRL N  &hrmr RALT S   &kp MINUS
      /* ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯ ╰────────────┼─────────────┼─────────────┼─────────────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
           &caps_word     &kp SEMI        &kp Q         &kp J         &kp K         &kp X                                     ______        ______                                      &kp B         &kp M         &kp W         &kp V          &kp Z       &kp BSLH
      /* ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯ ╭──────────────────────────┼─────────────┼─────────────┼───────────────────────────╮ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
