@@ -100,7 +100,7 @@ ZMK_BEHAVIOR(screen_down, macro,
 ZMK_BEHAVIOR(fullscreen, macro,
     wait-ms = <100>;
     tap-ms= <5>;
-    bindings = <&kp LG(LA(F))>;
+    bindings = <&kp LG(LA(ENTER))>;
 )
 
 // hotswap program
