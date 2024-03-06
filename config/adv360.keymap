@@ -130,7 +130,7 @@ ZMK_BEHAVIOR(win_switch, macro,
     bindings = <&kp LG(TILDE)>;
 )
 
-// tap: sticky shift | double tap: capsword
+// tap: sticky shift (next press is shifted) | double tap: capsword (letters shifted until space or punctuation)
 ZMK_BEHAVIOR(sshift, tap_dance,
     tapping-term-ms = <200>;
     bindings = <&sk LSHFT>, <&caps_word>;
